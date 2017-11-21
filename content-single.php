@@ -24,7 +24,7 @@
 <? if ( function_exists( 'coauthors_posts_links' ) ) {
     global $post;
         $author_id=$post->post_author;
-        foreach( get_coauthors() as $coauthor ): ?>
+        foreach( get_coauthors() as $coauthor ){ ?>
  
         <?php
  
@@ -62,8 +62,8 @@ echo "<span class='name-title'>". $full_name . "<br />" . $title . "</span>";
  
  
 </div><!-- .author-meta -->
-        <?php }
-        endforeach;
+        <?php 
+}
 } 
  
 ?>
