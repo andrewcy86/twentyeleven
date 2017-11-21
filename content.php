@@ -22,7 +22,7 @@
 			<?php if ( 'post' == get_post_type() ) : ?>
 
 
-   <? if ( function_exists( 'coauthors_posts_links' ) ) {
+   <?php if ( function_exists( 'coauthors_posts_links' ) ) {
     global $post;
         $author_id=$post->post_author;
         foreach( get_coauthors() as $coauthor ): ?>
