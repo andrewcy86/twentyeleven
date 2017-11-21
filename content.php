@@ -22,10 +22,19 @@
 			<?php if ( 'post' == get_post_type() ) : ?>
 
 
-   <?php if ( function_exists( 'coauthors_posts_links' ) ) {
+<?php if ( function_exists( 'coauthors_posts_links' ) ) {
     global $post;
         $author_id=$post->post_author;
         foreach( get_coauthors() as $coauthor ): ?>
+
+		<?php
+
+
+$avatar_url = get_avatar( $coauthor->user_email, '50' );
+
+if (strpos($avatar_url, 'wp-content') !== false) {
+
+?>
 		
 	<div class="author-meta">
 <?php echo get_avatar( $coauthor->user_email, '50' ); ?>
@@ -54,8 +63,11 @@ echo "<span class='name-title'>". $full_name . "<br />" . $title . "</span>";
 
 
 </div><!-- .author-meta -->
-        <?php endforeach;
-} ?>
+        <?php }
+		endforeach;
+} 
+
+?>
 
 
 
