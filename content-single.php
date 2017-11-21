@@ -64,8 +64,8 @@ echo "<span class='name-title'>". $full_name . "<br />" . $title . "</span>";
 </div><!-- .author-meta -->
         <?php 
 }
-} 
- 
+        }
+}
 ?>
  
  
