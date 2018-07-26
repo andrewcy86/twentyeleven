@@ -21,12 +21,14 @@
 	
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 
-<?php
-if ( function_exists( 'coauthors_posts_links' ) ) {
+<? if ( function_exists( 'coauthors_posts_links' ) ) {
     global $post;
         $author_id=$post->post_author;
-        foreach( get_coauthors() as $coauthor ): 
-        
+        foreach( get_coauthors() as $coauthor ): ?>
+
+		<?php
+
+
 $avatar_url = get_avatar( $coauthor->user_email, '50' );
 
 if (strpos($avatar_url, 'wp-content') !== false) {
@@ -60,8 +62,7 @@ echo "<span class='name-title'>". $full_name . "<br />" . $title . "</span>";
 
 
 </div><!-- .author-meta -->
-        <?php 
-        }
+        <?php }
 		endforeach;
 } 
 
