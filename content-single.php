@@ -21,10 +21,10 @@
 	
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 
-<? if ( function_exists( 'coauthors_posts_links' ) ) {
-    global $post;
-        $author_id=$post->post_author;
-        foreach( get_coauthors() as $coauthor ): ?>
+<?// if ( function_exists( 'coauthors_posts_links' ) ) {
+    //global $post;
+    //    $author_id=$post->post_author;
+    //    foreach( get_coauthors() as $coauthor ): ?>
 
 		<?php
 
@@ -41,29 +41,29 @@
 
   <?php
 
-$fname = $coauthor->first_name;
-$lname = $coauthor->last_name;
-$title = $coauthor->description;
+//$fname = $coauthor->first_name;
+//$lname = $coauthor->last_name;
+//$title = $coauthor->description;
 
-$full_name = '';
+//$full_name = '';
 
-if( empty($fname)){
-    $full_name = $lname;
-} elseif( empty( $lname )){
-    $full_name = $fname;
-} else {
+//if( empty($fname)){
+  //  $full_name = $lname;
+//} elseif( empty( $lname )){
+  //  $full_name = $fname;
+//} else {
     //both first name and last name are present
-    $full_name = "{$fname} {$lname}";
-}
+  //  $full_name = "{$fname} {$lname}";
+//}
 
-echo "<span class='name-title'>". $full_name . "<br />" . $title . "</span>"; 
+//echo "<span class='name-title'>". $full_name . "<br />" . $title . "</span>"; 
 
 ?>
 
 
 </div><!-- .author-meta -->
         <?php //}
-		endforeach;
+//		endforeach;
 //} 
 
 ?>
