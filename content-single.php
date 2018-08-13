@@ -29,14 +29,14 @@
 		<?php
 
 
-$avatar_url = get_avatar( $coauthor->user_email, '50' );
+$avatar_url = get_wp_user_avatar( $coauthor->user_email, '50' );
 
 if (strpos($avatar_url, 'wp-content') !== false) {
 
 ?>
 		
 	<div class="author-meta">
-<?php echo get_avatar( $coauthor->user_email, '50' ); ?>
+<?php echo get_wp_user_avatar( $coauthor->user_email, '50' ); ?>
 							
 
   <?php
